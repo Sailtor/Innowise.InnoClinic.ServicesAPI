@@ -5,13 +5,13 @@ VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InnoClinic.ServicesAPI", "InnoClinic.ServicesAPI.csproj", "{FF9D8BC4-5923-4F70-9706-23D8CA808943}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core", "Entities\Core.csproj", "{E6FC0F75-3BCA-4B99-9E98-1D9753F48F84}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core", "..\Entities\Core.csproj", "{E6FC0F75-3BCA-4B99-9E98-1D9753F48F84}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UseCases", "UseCases\UseCases.csproj", "{FD8707AC-CA10-455A-AA5A-1C67884542FB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UseCases", "..\UseCases\UseCases.csproj", "{FD8707AC-CA10-455A-AA5A-1C67884542FB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure.Presentation", "Infrastructure\Infrastructure.Presentation.csproj", "{39832427-0A53-4DF9-A160-3A19FF325D7B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure.Presentation", "..\Infrastructure\Infrastructure.Presentation.csproj", "{39832427-0A53-4DF9-A160-3A19FF325D7B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Persistence", "Infrastructure.Persistence\Infrastructure.Persistence.csproj", "{BE895CFF-E096-47DC-882F-C6CE35604AA4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Persistence", "..\Infrastructure.Persistence\Infrastructure.Persistence.csproj", "{BE895CFF-E096-47DC-882F-C6CE35604AA4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
