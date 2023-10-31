@@ -1,7 +1,7 @@
-﻿using MediatR;
-using UseCases.Dtos.ServiceDto;
+﻿using UseCases.Dtos.ServiceDto;
+using UseCases.Interfaces;
 
 namespace UseCases.Commands.Services
 {
-    public record UpdateServiceCommand(Guid serviceId, ServiceForUpdateDto serviceForUpdate) : IRequest;
+    public record UpdateServiceCommand(Guid serviceId, ServiceForUpdateDto serviceForUpdate) : ICommand;
 }

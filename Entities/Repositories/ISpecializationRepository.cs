@@ -7,7 +7,7 @@ namespace Core.Repositories
         Task<IEnumerable<Specialization>> GetAllAsync(CancellationToken cancellationToken = default);
         Task<Specialization> GetByIdAsync(Guid specializationId, CancellationToken cancellationToken = default);
         void Update(Specialization specialization, CancellationToken cancellationToken = default);
-        Task AddAsync(Specialization specialization);
+        Task AddAsync(Specialization specialization, CancellationToken cancellationToken);
         void Remove(Specialization specialization);
     }
 }

@@ -1,12 +1,12 @@
 ﻿using AutoMapper;
 using Core.Exceptions;
 using Core.Repositories;
-using MediatR;
 using UseCases.Commands.Categories;
+using UseCases.Interfaces;
 
 namespace UseCases.Handlers.Categories
 {
-    public class UpdateCategoryHandler : IRequestHandler<UpdateCategoryCommand>
+    public class UpdateCategoryHandler : ICommandHandler<UpdateCategoryCommand>
     {
         private readonly IRepositoryManager _repositoryManager;
         private readonly IMapper _mapper;

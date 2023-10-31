@@ -1,11 +1,11 @@
 ﻿using Core.Exceptions;
 using Core.Repositories;
-using MediatR;
 using UseCases.Commands.Services;
+using UseCases.Interfaces;
 
 namespace UseCases.Handlers
 {
-    public class DeleteServiceHandler : IRequestHandler<DeleteServiceCommand>
+    public class DeleteServiceHandler : ICommandHandler<DeleteServiceCommand>
     {
         private readonly IRepositoryManager _repositoryManager;
 

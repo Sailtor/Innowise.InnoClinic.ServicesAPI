@@ -1,7 +1,7 @@
-﻿using MediatR;
-using UseCases.Dtos.CategoryDto;
+﻿using UseCases.Dtos.CategoryDto;
+using UseCases.Interfaces;
 
 namespace UseCases.Queries.Categories
 {
-    public record GetCategoriesQuery() : IRequest<IEnumerable<CategoryForResponseDto>>;
+    public record GetCategoriesQuery() : IQuery<IEnumerable<CategoryForResponseDto>>;
 }

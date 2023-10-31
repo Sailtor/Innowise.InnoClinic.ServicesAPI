@@ -7,12 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Commands\Specializations\" />
-    <Folder Include="Handlers\Specializations\" />
-    <Folder Include="Queries\Specializations\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="AutoMapper" Version="12.0.1" />
     <PackageReference Include="FluentValidation" Version="11.8.0" />
     <PackageReference Include="MediatR" Version="12.1.1" />

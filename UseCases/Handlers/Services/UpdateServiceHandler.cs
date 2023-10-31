@@ -1,12 +1,12 @@
 ﻿using AutoMapper;
 using Core.Exceptions;
 using Core.Repositories;
-using MediatR;
 using UseCases.Commands.Services;
+using UseCases.Interfaces;
 
 namespace UseCases.Handlers
 {
-    public class UpdateServiceHandler : IRequestHandler<UpdateServiceCommand>
+    public class UpdateServiceHandler : ICommandHandler<UpdateServiceCommand>
     {
         private readonly IRepositoryManager _repositoryManager;
         private readonly IMapper _mapper;

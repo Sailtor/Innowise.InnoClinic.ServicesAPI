@@ -1,6 +1,6 @@
-﻿using MediatR;
+﻿using UseCases.Interfaces;
 
 namespace UseCases.Commands.Services
 {
-    public record DeleteServiceCommand(Guid serviceId) : IRequest;
+    public record DeleteServiceCommand(Guid serviceId) : ICommand;
 }

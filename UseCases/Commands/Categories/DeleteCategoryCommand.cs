@@ -1,6 +1,6 @@
-﻿using MediatR;
+﻿using UseCases.Interfaces;
 
 namespace UseCases.Commands.Categories
 {
-    public record DeleteCategoryCommand(Guid categoryId) : IRequest;
+    public record DeleteCategoryCommand(Guid categoryId) : ICommand;
 }

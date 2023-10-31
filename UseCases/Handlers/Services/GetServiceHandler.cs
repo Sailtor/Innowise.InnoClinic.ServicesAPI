@@ -1,13 +1,13 @@
 ﻿using AutoMapper;
 using Core.Exceptions;
 using Core.Repositories;
-using MediatR;
 using UseCases.Dtos.ServiceDto;
+using UseCases.Interfaces;
 using UseCases.Queries.Services;
 
 namespace UseCases.Handlers
 {
-    public class GetServiceHandler : IRequestHandler<GetServiceQuery, ServiceForResponseDto>
+    public class GetServiceHandler : IQueryHandler<GetServiceQuery, ServiceForResponseDto>
     {
         private readonly IRepositoryManager _repositoryManager;
         private readonly IMapper _mapper;

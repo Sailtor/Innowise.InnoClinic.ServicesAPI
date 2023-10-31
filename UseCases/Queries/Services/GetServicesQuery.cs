@@ -1,7 +1,7 @@
-﻿using MediatR;
-using UseCases.Dtos.ServiceDto;
+﻿using UseCases.Dtos.ServiceDto;
+using UseCases.Interfaces;
 
 namespace UseCases.Queries.Services
 {
-    public record GetServicesQuery() : IRequest<IEnumerable<ServiceForResponseDto>>;
+    public record GetServicesQuery() : IQuery<IEnumerable<ServiceForResponseDto>>;
 }

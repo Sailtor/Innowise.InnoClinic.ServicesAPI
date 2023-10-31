@@ -1,11 +1,11 @@
 ﻿using Core.Exceptions;
 using Core.Repositories;
-using MediatR;
 using UseCases.Commands.Categories;
+using UseCases.Interfaces;
 
 namespace UseCases.Handlers.Categories
 {
-    public class DeleteCategoryHandler : IRequestHandler<DeleteCategoryCommand>
+    public class DeleteCategoryHandler : ICommandHandler<DeleteCategoryCommand>
     {
         private readonly IRepositoryManager _repositoryManager;
 

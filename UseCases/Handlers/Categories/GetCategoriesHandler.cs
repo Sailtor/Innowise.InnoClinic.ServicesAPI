@@ -1,12 +1,12 @@
 ﻿using AutoMapper;
 using Core.Repositories;
-using MediatR;
 using UseCases.Dtos.CategoryDto;
+using UseCases.Interfaces;
 using UseCases.Queries.Categories;
 
 namespace UseCases.Handlers.Categories
 {
-    public class GetCategoriesHandler : IRequestHandler<GetCategoriesQuery, IEnumerable<CategoryForResponseDto>>
+    public class GetCategoriesHandler : IQueryHandler<GetCategoriesQuery, IEnumerable<CategoryForResponseDto>>
     {
         private readonly IRepositoryManager _repositoryManager;
         private readonly IMapper _mapper;

@@ -1,7 +1,7 @@
-﻿using MediatR;
-using UseCases.Dtos.CategoryDto;
+﻿using UseCases.Dtos.CategoryDto;
+using UseCases.Interfaces;
 
 namespace UseCases.Commands.Categories
 {
-    public record CreateCategoryCommand(CategoryForCreationDto categoryForCreation) : IRequest<CategoryForResponseDto>;
+    public record CreateCategoryCommand(CategoryForCreationDto categoryForCreation) : ICommand<CategoryForResponseDto>;
 }

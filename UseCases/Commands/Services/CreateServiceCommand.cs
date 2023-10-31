@@ -1,7 +1,7 @@
-﻿using MediatR;
-using UseCases.Dtos.ServiceDto;
+﻿using UseCases.Dtos.ServiceDto;
+using UseCases.Interfaces;
 
 namespace UseCases.Commands.Services
 {
-    public record CreateServiceCommand(ServiceForCreationDto serviceForCreation) : IRequest<ServiceForResponseDto>;
+    public record CreateServiceCommand(ServiceForCreationDto serviceForCreation) : ICommand<ServiceForResponseDto>;
 }

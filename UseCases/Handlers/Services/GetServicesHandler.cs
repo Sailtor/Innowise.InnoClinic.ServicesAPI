@@ -1,12 +1,12 @@
 ﻿using AutoMapper;
 using Core.Repositories;
-using MediatR;
 using UseCases.Dtos.ServiceDto;
+using UseCases.Interfaces;
 using UseCases.Queries.Services;
 
 namespace UseCases.Handlers
 {
-    public class GetServicesHandler : IRequestHandler<GetServicesQuery, IEnumerable<ServiceForResponseDto>>
+    public class GetServicesHandler : IQueryHandler<GetServicesQuery, IEnumerable<ServiceForResponseDto>>
     {
         private readonly IRepositoryManager _repositoryManager;
         private readonly IMapper _mapper;

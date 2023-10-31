@@ -1,13 +1,13 @@
 ﻿using AutoMapper;
 using Core.Entities;
 using Core.Repositories;
-using MediatR;
 using UseCases.Commands.Categories;
 using UseCases.Dtos.CategoryDto;
+using UseCases.Interfaces;
 
 namespace UseCases.Handlers.Categories
 {
-    public class CreateCategoryHandler : IRequestHandler<CreateCategoryCommand, CategoryForResponseDto>
+    public class CreateCategoryHandler : ICommandHandler<CreateCategoryCommand, CategoryForResponseDto>
     {
         private readonly IRepositoryManager _repositoryManager;
         private readonly IMapper _mapper;

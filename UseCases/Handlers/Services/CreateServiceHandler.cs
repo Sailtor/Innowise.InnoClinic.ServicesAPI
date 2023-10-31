@@ -1,13 +1,13 @@
 ﻿using AutoMapper;
 using Core.Entities;
 using Core.Repositories;
-using MediatR;
 using UseCases.Commands.Services;
 using UseCases.Dtos.ServiceDto;
+using UseCases.Interfaces;
 
 namespace UseCases.Handlers
 {
-    public class CreateServiceHandler : IRequestHandler<CreateServiceCommand, ServiceForResponseDto>
+    public class CreateServiceHandler : ICommandHandler<CreateServiceCommand, ServiceForResponseDto>
     {
         private readonly IRepositoryManager _repositoryManager;
         private readonly IMapper _mapper;
