@@ -22,7 +22,6 @@ namespace UseCases.Handlers
         {
             var specialization = _mapper.Map<Specialization>(request.specializationForCreation);
             await _repositoryManager.SpecializationRepository.AddAsync(specialization, cancellationToken);
-            await _repositoryManager.UnitOfWork.SaveChangesAsync(cancellationToken);
             return _mapper.Map<SpecializationForResponseDto>(specialization);
         }
     }

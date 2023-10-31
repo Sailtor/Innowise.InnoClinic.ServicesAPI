@@ -22,7 +22,6 @@ namespace UseCases.Handlers
         {
             var service = _mapper.Map<Service>(request.serviceForCreation);
             await _repositoryManager.ServiceRepository.AddAsync(service, cancellationToken);
-            await _repositoryManager.UnitOfWork.SaveChangesAsync(cancellationToken);
             return _mapper.Map<ServiceForResponseDto>(service);
         }
     }

@@ -22,7 +22,6 @@ namespace UseCases.Handlers
                 throw new ServiceNotFoundException(request.serviceId);
             }
             _repositoryManager.ServiceRepository.Remove(service);
-            await _repositoryManager.UnitOfWork.SaveChangesAsync(cancellationToken);
         }
     }
 }

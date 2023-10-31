@@ -25,7 +25,6 @@ namespace UseCases.Handlers
                 throw new ServiceNotFoundException(request.serviceId);
             }
             _mapper.Map(request.serviceForUpdate, service);
-            await _repositoryManager.UnitOfWork.SaveChangesAsync(cancellationToken);
         }
     }
 }

@@ -22,7 +22,6 @@ namespace UseCases.Handlers
                 throw new SpecializationNotFoundException(request.specializationId);
             }
             _repositoryManager.SpecializationRepository.Remove(specialization);
-            await _repositoryManager.UnitOfWork.SaveChangesAsync(cancellationToken);
         }
     }
 }

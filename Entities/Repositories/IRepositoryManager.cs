@@ -5,7 +5,5 @@
         ISpecializationRepository SpecializationRepository { get; }
         IServiceRepository ServiceRepository { get; }
         ICategoryRepository CategoryRepository { get; }
-        IUnitOfWork UnitOfWork { get; }
-
     }
 }

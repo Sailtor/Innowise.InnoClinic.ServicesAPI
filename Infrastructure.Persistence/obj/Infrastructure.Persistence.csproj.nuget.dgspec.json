@@ -4,14 +4,14 @@
     "D:\\InnoClinic\\InnoClinic.ServicesAPI\\Infrastructure.Persistence\\Infrastructure.Persistence.csproj": {}
   },
   "projects": {
-    "D:\\InnoClinic\\InnoClinic.ServicesAPI\\Infrastructure.Persistence\\Infrastructure.Persistence.csproj": {
+    "D:\\InnoClinic\\InnoClinic.ServicesAPI\\Entities\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\InnoClinic\\InnoClinic.ServicesAPI\\Infrastructure.Persistence\\Infrastructure.Persistence.csproj",
-        "projectName": "Infrastructure.Persistence",
-        "projectPath": "D:\\InnoClinic\\InnoClinic.ServicesAPI\\Infrastructure.Persistence\\Infrastructure.Persistence.csproj",
+        "projectUniqueName": "D:\\InnoClinic\\InnoClinic.ServicesAPI\\Entities\\Core.csproj",
+        "projectName": "Core",
+        "projectPath": "D:\\InnoClinic\\InnoClinic.ServicesAPI\\Entities\\Core.csproj",
         "packagesPath": "C:\\Users\\Sailtor\\.nuget\\packages\\",
-        "outputPath": "D:\\InnoClinic\\InnoClinic.ServicesAPI\\Infrastructure.Persistence\\obj\\",
+        "outputPath": "D:\\InnoClinic\\InnoClinic.ServicesAPI\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Sailtor\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,83 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\InnoClinic\\InnoClinic.ServicesAPI\\Infrastructure.Persistence\\Infrastructure.Persistence.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\InnoClinic\\InnoClinic.ServicesAPI\\Infrastructure.Persistence\\Infrastructure.Persistence.csproj",
+        "projectName": "Infrastructure.Persistence",
+        "projectPath": "D:\\InnoClinic\\InnoClinic.ServicesAPI\\Infrastructure.Persistence\\Infrastructure.Persistence.csproj",
+        "packagesPath": "C:\\Users\\Sailtor\\.nuget\\packages\\",
+        "outputPath": "D:\\InnoClinic\\InnoClinic.ServicesAPI\\Infrastructure.Persistence\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Sailtor\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "D:\\InnoClinic\\InnoClinic.ServicesAPI\\Entities\\Core.csproj": {
+                "projectPath": "D:\\InnoClinic\\InnoClinic.ServicesAPI\\Entities\\Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.1.15, )"
+            },
+            "FluentMigrator.Runner": {
+              "target": "Package",
+              "version": "[3.3.2, )"
+            },
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[5.1.2, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

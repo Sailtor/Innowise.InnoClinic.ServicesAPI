@@ -35,7 +35,7 @@ namespace Presentation.Controllers
             return Ok(categoryDto);
         }
 
-        [Authorize (Roles = UserRoles.Receptionist)]
+        [Authorize(Roles = UserRoles.Receptionist)]
         [HttpPost]
         public async Task<IActionResult> CreateCategory([FromBody] CategoryForCreationDto categoryForCreationDto, CancellationToken cancellationToken)
         {

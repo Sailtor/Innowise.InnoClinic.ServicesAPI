@@ -22,7 +22,6 @@ namespace UseCases.Handlers.Categories
         {
             var category = _mapper.Map<Category>(request.categoryForCreation);
             await _repositoryManager.CategoryRepository.AddAsync(category, cancellationToken);
-            await _repositoryManager.UnitOfWork.SaveChangesAsync(cancellationToken);
             return _mapper.Map<CategoryForResponseDto>(category);
         }
     }

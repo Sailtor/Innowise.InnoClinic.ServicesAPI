@@ -25,7 +25,6 @@ namespace UseCases.Handlers
                 throw new ServiceNotFoundException(request.serviceId);
             }
             service.IsActive = request.isActive;
-            await _repositoryManager.UnitOfWork.SaveChangesAsync(cancellationToken);
         }
     }
 }

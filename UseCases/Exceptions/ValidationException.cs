@@ -1,5 +1,4 @@
-﻿using Core.Exceptions;
-using ApplicationException = Core.Exceptions.ApplicationException;
+﻿using ApplicationException = Core.Exceptions.ApplicationException;
 
 namespace UseCases.Exceptions
 {

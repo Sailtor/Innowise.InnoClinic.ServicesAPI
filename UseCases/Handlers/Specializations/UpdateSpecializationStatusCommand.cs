@@ -1,5 +1,4 @@
-﻿using AutoMapper;
-using Core.Entities;
+﻿using Core.Entities;
 using Core.Exceptions;
 using Core.Repositories;
 using UseCases.Commands.Specializations;
@@ -35,7 +34,6 @@ namespace UseCases.Handlers
             /*
             change connected doctors status via rabbitMQ  
             */
-            await _repositoryManager.UnitOfWork.SaveChangesAsync(cancellationToken);
         }
     }
 }

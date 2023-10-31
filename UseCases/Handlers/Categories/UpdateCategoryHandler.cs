@@ -25,7 +25,6 @@ namespace UseCases.Handlers.Categories
                 throw new CategoryNotFoundException(request.categoryId);
             }
             _mapper.Map(request.categoryForUpdate, category);
-            await _repositoryManager.UnitOfWork.SaveChangesAsync(cancellationToken);
         }
     }
 }

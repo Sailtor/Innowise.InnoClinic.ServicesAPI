@@ -22,7 +22,6 @@ namespace UseCases.Handlers.Categories
                 throw new CategoryNotFoundException(request.categoryId);
             }
             _repositoryManager.CategoryRepository.Remove(category);
-            await _repositoryManager.UnitOfWork.SaveChangesAsync(cancellationToken);
         }
     }
 }
