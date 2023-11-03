@@ -16,8 +16,8 @@ namespace Infrastructure.Persistence.Repositories
         public async Task<IEnumerable<Category>> GetAllAsync(CancellationToken cancellationToken = default)
         {
             using var connection = _context.CreateConnection();
-            var companies = await connection.QueryAsync<Category>("dbo.SelectAllCategories", commandType: CommandType.StoredProcedure);
-            return companies.ToList();
+            var categories = await connection.QueryAsync<Category>("dbo.SelectAllCategories", commandType: CommandType.StoredProcedure);
+            return categories.ToList();
         }
 
         public async Task<Category> GetByIdAsync(Guid categoryId, CancellationToken cancellationToken = default)
@@ -26,7 +26,7 @@ namespace Infrastructure.Persistence.Repositories
             parameters.Add("Id", categoryId, DbType.Guid);
 
             using var connection = _context.CreateConnection();
-            var category = await connection.QuerySingleAsync<Category>("dbo.SelectCategory", parameters, commandType: CommandType.StoredProcedure);
+            var category = await connection.QuerySingleOrDefaultAsync<Category>("dbo.SelectCategory", parameters, commandType: CommandType.StoredProcedure);
             return category;
         }
         public async Task<Category> AddAsync(Category category, CancellationToken cancellationToken = default)

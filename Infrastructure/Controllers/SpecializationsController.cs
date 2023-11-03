@@ -19,7 +19,7 @@ namespace Infrastructure.Presentation.Controllers
             _mediator = mediator;
         }
 
-        [Authorize(Roles = UserRoles.All)]
+        //[Authorize(Roles = UserRoles.All)]
         [HttpGet]
         public async Task<IActionResult> GetSpecializations(CancellationToken cancellationToken)
         {
@@ -27,7 +27,7 @@ namespace Infrastructure.Presentation.Controllers
             return Ok(specializationsDto);
         }
 
-        [Authorize(Roles = UserRoles.All)]
+        //[Authorize(Roles = UserRoles.All)]
         [HttpGet("{specializationId:guid}")]
         public async Task<IActionResult> GetSpecializationById(Guid specializationId, CancellationToken cancellationToken)
         {
@@ -35,7 +35,7 @@ namespace Infrastructure.Presentation.Controllers
             return Ok(specializationDto);
         }
 
-        [Authorize(Roles = UserRoles.Receptionist)]
+        //[Authorize(Roles = UserRoles.Receptionist)]
         [HttpPost]
         public async Task<IActionResult> CreateSpecialization([FromBody] SpecializationForCreationDto specializationForCreationDto, CancellationToken cancellationToken)
         {
@@ -43,7 +43,7 @@ namespace Infrastructure.Presentation.Controllers
             return CreatedAtAction(nameof(GetSpecializationById), new { specializationId = specializationDto.Id }, specializationDto);
         }
 
-        [Authorize(Roles = UserRoles.Receptionist)]
+        //[Authorize(Roles = UserRoles.Receptionist)]
         [HttpPut("{specializationId:guid}")]
         public async Task<IActionResult> UpdateSpecialization(Guid specializationId, [FromBody] SpecializationForUpdateDto specializationForUpdateDto, CancellationToken cancellationToken)
         {
@@ -51,7 +51,7 @@ namespace Infrastructure.Presentation.Controllers
             return NoContent();
         }
 
-        [Authorize(Roles = UserRoles.Receptionist)]
+        //[Authorize(Roles = UserRoles.Receptionist)]
         [HttpPatch("{specializationId:guid}")]
         public async Task<IActionResult> ChangeSpecializationStatus(Guid specializationId, [FromBody] bool isActive, CancellationToken cancellationToken)
         {
@@ -59,7 +59,7 @@ namespace Infrastructure.Presentation.Controllers
             return NoContent();
         }
 
-        [Authorize(Roles = UserRoles.Receptionist)]
+        //[Authorize(Roles = UserRoles.Receptionist)]
         [HttpDelete("{specializationId:guid}")]
         public async Task<IActionResult> DeleteSpecialization(Guid specializationId, CancellationToken cancellationToken)
         {

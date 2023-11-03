@@ -11,7 +11,7 @@ builder.Services.ConfigureEntityServices();
 builder.Services.ConfigureFluentValidation();
 builder.Services.ConfigureAutomapper();
 builder.Services.ConfigureCQRSServices();
-//builder.Services.CofigureAuthorization();
+builder.Services.CofigureAuthorization();
 
 
 var app = builder.Build();

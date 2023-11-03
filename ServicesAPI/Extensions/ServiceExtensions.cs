@@ -50,7 +50,7 @@ namespace InnoClinic.ServicesAPI.Extensions
         {
             services.AddAutoMapper(typeof(UseCases.AssemblyReference).Assembly);
         }
-        /*public static void CofigureAuthorization(this IServiceCollection services)
+        public static void CofigureAuthorization(this IServiceCollection services)
         {
             services.AddAuthentication("Bearer")
                .AddJwtBearer("Bearer", opt =>
@@ -59,7 +59,7 @@ namespace InnoClinic.ServicesAPI.Extensions
                    opt.Authority = "https://localhost:5005";
                    opt.Audience = "services";
                });
-        }*/
+        }
 
         /* --- CUSTOM MIDDLEWARE --- */
         /*public static void UseExceptionHandlerMiddleware(this IApplicationBuilder app)

@@ -19,7 +19,7 @@ namespace Infrastructure.Presentation.Controllers
             _mediator = mediator;
         }
 
-        [Authorize(Roles = UserRoles.All)]
+        //[Authorize(Roles = UserRoles.All)]
         [HttpGet]
         public async Task<IActionResult> GetServices(CancellationToken cancellationToken)
         {
@@ -27,7 +27,7 @@ namespace Infrastructure.Presentation.Controllers
             return Ok(servicesDto);
         }
 
-        [Authorize(Roles = UserRoles.All)]
+        //[Authorize(Roles = UserRoles.All)]
         [HttpGet("{serviceId:guid}")]
         public async Task<IActionResult> GetServiceById(Guid serviceId, CancellationToken cancellationToken)
         {
@@ -35,7 +35,7 @@ namespace Infrastructure.Presentation.Controllers
             return Ok(serviceDto);
         }
 
-        [Authorize(Roles = UserRoles.Receptionist)]
+        //[Authorize(Roles = UserRoles.Receptionist)]
         [HttpPost]
         public async Task<IActionResult> CreateService([FromBody] ServiceForCreationDto serviceForCreationDto, CancellationToken cancellationToken)
         {
@@ -43,7 +43,7 @@ namespace Infrastructure.Presentation.Controllers
             return CreatedAtAction(nameof(GetServiceById), new { serviceId = serviceDto.Id }, serviceDto);
         }
 
-        [Authorize(Roles = UserRoles.Receptionist)]
+        //[Authorize(Roles = UserRoles.Receptionist)]
         [HttpPut("{serviceId:guid}")]
         public async Task<IActionResult> UpdateService(Guid serviceId, [FromBody] ServiceForUpdateDto serviceForUpdateDto, CancellationToken cancellationToken)
         {
@@ -51,7 +51,7 @@ namespace Infrastructure.Presentation.Controllers
             return NoContent();
         }
 
-        [Authorize(Roles = UserRoles.Receptionist)]
+        //[Authorize(Roles = UserRoles.Receptionist)]
         [HttpPatch("{serviceId:guid}")]
         public async Task<IActionResult> ChangeServiceStatus(Guid serviceId, [FromBody] bool isActive, CancellationToken cancellationToken)
         {
@@ -59,7 +59,7 @@ namespace Infrastructure.Presentation.Controllers
             return NoContent();
         }
 
-        [Authorize(Roles = UserRoles.Receptionist)]
+        //[Authorize(Roles = UserRoles.Receptionist)]
         [HttpDelete("{serviceId:guid}")]
         public async Task<IActionResult> DeleteService(Guid serviceId, CancellationToken cancellationToken)
         {

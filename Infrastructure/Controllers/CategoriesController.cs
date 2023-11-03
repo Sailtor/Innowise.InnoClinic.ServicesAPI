@@ -1,4 +1,6 @@
-﻿using MediatR;
+﻿using Infrastructure.Presentation.Data;
+using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using UseCases.Commands.Categories;
 using UseCases.Dtos.CategoryDto;
@@ -17,7 +19,7 @@ namespace Infrastructure.Presentation.Controllers
             _mediator = mediator;
         }
 
-        //[Authorize(Roles = UserRoles.All)]
+        [Authorize(Roles = UserRoles.All)]
         [HttpGet]
         public async Task<IActionResult> GetCategories(CancellationToken cancellationToken)
         {
@@ -25,7 +27,7 @@ namespace Infrastructure.Presentation.Controllers
             return Ok(categoriesDto);
         }
 
-        //[Authorize(Roles = UserRoles.All)]
+        [Authorize(Roles = UserRoles.All)]
         [HttpGet("{categoryId:guid}")]
         public async Task<IActionResult> GetCategoryById(Guid categoryId, CancellationToken cancellationToken)
         {
@@ -33,7 +35,7 @@ namespace Infrastructure.Presentation.Controllers
             return Ok(categoryDto);
         }
 
-        //[Authorize(Roles = UserRoles.Receptionist)]
+        [Authorize(Roles = UserRoles.Receptionist)]
         [HttpPost]
         public async Task<IActionResult> CreateCategory([FromBody] CategoryForCreationDto categoryForCreationDto, CancellationToken cancellationToken)
         {
@@ -41,7 +43,7 @@ namespace Infrastructure.Presentation.Controllers
             return CreatedAtAction(nameof(GetCategoryById), new { categoryId = categoryDto.Id }, categoryDto);
         }
 
-        //[Authorize(Roles = UserRoles.Receptionist)]
+        [Authorize(Roles = UserRoles.Receptionist)]
         [HttpPut("{categoryId:guid}")]
         public async Task<IActionResult> UpdateCategory(Guid categoryId, [FromBody] CategoryForUpdateDto categoryForUpdateDto, CancellationToken cancellationToken)
         {
@@ -49,7 +51,7 @@ namespace Infrastructure.Presentation.Controllers
             return NoContent();
         }
 
-        //[Authorize(Roles = UserRoles.Receptionist)]
+        [Authorize(Roles = UserRoles.Receptionist)]
         [HttpDelete("{categoryId:guid}")]
         public async Task<IActionResult> DeleteCategory(Guid categoryId, CancellationToken cancellationToken)
         {
