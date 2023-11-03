@@ -6,10 +6,13 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.ConfigureControllers();
 builder.Services.ConfigureSwagger();
+builder.Services.ConfigureDapper(builder.Configuration);
 builder.Services.ConfigureEntityServices();
-builder.Services.ConfigureAutomapper();
-//builder.Services.CofigureAuthorization();
 builder.Services.ConfigureFluentValidation();
+builder.Services.ConfigureAutomapper();
+builder.Services.ConfigureCQRSServices();
+//builder.Services.CofigureAuthorization();
+
 
 var app = builder.Build();
 
@@ -25,7 +28,7 @@ app.MigrateDatabase();
 
 app.UseHttpsRedirection();
 
-app.UseAuthorization();
+//app.UseAuthorization();
 
 app.MapControllers();
 

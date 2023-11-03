@@ -3,7 +3,7 @@ using UseCases.Commands.Services;
 
 namespace UseCases.FluentValidation.Validators.Commands.Services
 {
-    internal class UpdateServiceStatusCommandValidator : AbstractValidator<UpdateServiceStatusCommand>
+    public class UpdateServiceStatusCommandValidator : AbstractValidator<UpdateServiceStatusCommand>
     {
         public UpdateServiceStatusCommandValidator()
         {

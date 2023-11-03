@@ -52,7 +52,7 @@ namespace Presentation.Controllers
         }
 
         [Authorize(Roles = UserRoles.Receptionist)]
-        [HttpPut("{specializationId:guid}")]
+        [HttpPatch("{specializationId:guid}")]
         public async Task<IActionResult> ChangeSpecializationStatus(Guid specializationId, [FromBody] bool isActive, CancellationToken cancellationToken)
         {
             await _mediator.Send(new UpdateSpecializationStatusCommand(specializationId, isActive), cancellationToken);

@@ -21,7 +21,7 @@ namespace UseCases.Handlers
         public async Task<ServiceForResponseDto> Handle(CreateServiceCommand request, CancellationToken cancellationToken)
         {
             var service = _mapper.Map<Service>(request.serviceForCreation);
-            await _repositoryManager.ServiceRepository.AddAsync(service, cancellationToken);
+            service = await _repositoryManager.ServiceRepository.AddAsync(service, cancellationToken);
             return _mapper.Map<ServiceForResponseDto>(service);
         }
     }

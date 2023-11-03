@@ -23,15 +23,20 @@ namespace UseCases.Handlers
                 throw new SpecializationNotFoundException(request.specializationId);
             }
             specialization.IsActive = request.isActive;
+            _repositoryManager.SpecializationRepository.Update(specialization);
+
             var connectedServices = await _repositoryManager.ServiceRepository.GetAllAsync(cancellationToken);
             if (connectedServices is not null)
             {
                 foreach (Service s in connectedServices)
                 {
-                    s.IsActive = request.isActive;
+                    if (s.SpecializationId == request.specializationId)
+                    {
+                        s.IsActive = request.isActive;
+                    } 
                 }
             }
-            /*
+            /* TO DO:
             change connected doctors status via rabbitMQ  
             */
         }

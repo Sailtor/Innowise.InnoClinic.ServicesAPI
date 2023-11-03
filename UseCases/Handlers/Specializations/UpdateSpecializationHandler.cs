@@ -25,6 +25,7 @@ namespace UseCases.Handlers
                 throw new SpecializationNotFoundException(request.specializationId);
             }
             _mapper.Map(request.specializationForUpdate, specialization);
+            _repositoryManager.SpecializationRepository.Update(specialization);
         }
     }
 }

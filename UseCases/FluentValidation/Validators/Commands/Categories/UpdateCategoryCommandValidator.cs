@@ -4,7 +4,7 @@ using UseCases.FluentValidation.Validators.CreateDto;
 
 namespace UseCases.FluentValidation.Validators.Commands.Categories
 {
-    internal class UpdateCategoryCommandValidator : AbstractValidator<UpdateCategoryCommand>
+    public class UpdateCategoryCommandValidator : AbstractValidator<UpdateCategoryCommand>
     {
         public UpdateCategoryCommandValidator()
         {

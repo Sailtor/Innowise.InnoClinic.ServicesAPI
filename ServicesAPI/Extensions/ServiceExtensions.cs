@@ -4,8 +4,8 @@ using FluentValidation;
 using Infrastructure.Persistence;
 using Infrastructure.Persistence.Migrations;
 using MediatR;
+using System.Windows.Input;
 using UseCases.PipelineBehaviors;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace InnoClinic.ServicesAPI.Extensions
 {
@@ -32,8 +32,9 @@ namespace InnoClinic.ServicesAPI.Extensions
         }
         public static void ConfigureCQRSServices(this IServiceCollection services)
         {
+            services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
+
             services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(UseCases.AssemblyReference).Assembly));
-            services.AddSingleton(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
         }
         public static void ConfigureDapper(this IServiceCollection services, IConfiguration configuration)
         {
@@ -43,7 +44,7 @@ namespace InnoClinic.ServicesAPI.Extensions
                 .AddFluentMigratorCore()
                 .ConfigureRunner(c => c.AddSqlServer2016()
                     .WithGlobalConnectionString(configuration.GetConnectionString("ServicesDb"))
-                    .ScanIn(typeof(Infrastructure.Presentation.AssemblyReference).Assembly).For.Migrations());
+                    .ScanIn(typeof(Infrastructure.Persistence.AssemblyReference).Assembly).For.Migrations());
         }
 
         public static void ConfigureAutomapper(this IServiceCollection services)
@@ -57,7 +58,7 @@ namespace InnoClinic.ServicesAPI.Extensions
                {
                    opt.RequireHttpsMetadata = false;
                    opt.Authority = "https://localhost:5005";
-                   opt.Audience = "profiles";
+                   opt.Audience = "services";
                });
         }*/
 

@@ -1,5 +1,4 @@
-﻿using AutoMapper;
-using Core.Exceptions;
+﻿using Core.Exceptions;
 using Core.Repositories;
 using UseCases.Commands.Services;
 using UseCases.Interfaces;
@@ -9,12 +8,10 @@ namespace UseCases.Handlers
     public class UpdateServiceStatusHandler : ICommandHandler<UpdateServiceStatusCommand>
     {
         private readonly IRepositoryManager _repositoryManager;
-        private readonly IMapper _mapper;
 
-        public UpdateServiceStatusHandler(IRepositoryManager repositoryManager, IMapper mapper)
+        public UpdateServiceStatusHandler(IRepositoryManager repositoryManager)
         {
             _repositoryManager = repositoryManager;
-            _mapper = mapper;
         }
 
         public async Task Handle(UpdateServiceStatusCommand request, CancellationToken cancellationToken)
@@ -25,6 +22,7 @@ namespace UseCases.Handlers
                 throw new ServiceNotFoundException(request.serviceId);
             }
             service.IsActive = request.isActive;
+            _repositoryManager.ServiceRepository.Update(service);
         }
     }
 }

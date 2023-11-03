@@ -7,15 +7,17 @@ namespace Infrastructure.Persistence
     public class DapperContext
     {
         private readonly IConfiguration _configuration;
-        private readonly string _connectionString;
+        private readonly string _dbconnectionString;
+        private readonly string _masterconnectionString;
         public DapperContext(IConfiguration configuration)
         {
             _configuration = configuration;
-            _connectionString = _configuration.GetConnectionString("SqlConnection");
+            _dbconnectionString = _configuration.GetConnectionString("ServicesDb");
+            _masterconnectionString = _configuration.GetConnectionString("MasterConnection");
         }
         public IDbConnection CreateConnection()
-            => new SqlConnection(_connectionString);
+            => new SqlConnection(_dbconnectionString);
         public IDbConnection CreateMasterConnection()
-            => new SqlConnection(_configuration.GetConnectionString("MasterConnection"));
+            => new SqlConnection(_masterconnectionString);
     }
 }

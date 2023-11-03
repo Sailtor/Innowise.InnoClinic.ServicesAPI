@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
@@ -15,6 +15,21 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Entities\Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Service Include="{3259aa49-8aa1-44d3-9025-a0b520596a8c}" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Stored Procedures\Specializations\" />
+    <Folder Include="Stored Procedures\Services\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Stored Procedures\Categories\SelectAllCategories.sql">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

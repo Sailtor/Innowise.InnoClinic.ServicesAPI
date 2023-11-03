@@ -6,7 +6,7 @@ using ValidationException = UseCases.Exceptions.ValidationException;
 namespace UseCases.PipelineBehaviors
 {
     public sealed class ValidationBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
-        where TRequest : class, ICommand<TResponse>, ICommand
+        where TRequest : IBaseCommand
     {
         private readonly IEnumerable<IValidator<TRequest>> _validators;
         public ValidationBehavior(IEnumerable<IValidator<TRequest>> validators) => _validators = validators;

@@ -17,7 +17,7 @@ namespace UseCases.Handlers.Categories
         public async Task Handle(DeleteCategoryCommand request, CancellationToken cancellationToken)
         {
             var category = await _repositoryManager.CategoryRepository.GetByIdAsync(request.categoryId, cancellationToken);
-            if (category is null)
+            if (category is null) 
             {
                 throw new CategoryNotFoundException(request.categoryId);
             }

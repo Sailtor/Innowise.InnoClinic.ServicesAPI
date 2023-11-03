@@ -3,7 +3,7 @@ using UseCases.Commands.Specializations;
 
 namespace UseCases.FluentValidation.Validators.Commands.Specializations
 {
-    internal class UpdateSpecializationStatusCommandValidator : AbstractValidator<UpdateSpecializationStatusCommand>
+    public class UpdateSpecializationStatusCommandValidator : AbstractValidator<UpdateSpecializationStatusCommand>
     {
         public UpdateSpecializationStatusCommandValidator()
         {

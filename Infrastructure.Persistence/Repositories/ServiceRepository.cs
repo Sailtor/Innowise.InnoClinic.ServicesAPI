@@ -11,7 +11,7 @@ namespace Infrastructure.Persistence.Repositories
             _context = context;
         }
 
-        public Task AddAsync(Service service, CancellationToken cancellationToken)
+        public Task<Service> AddAsync(Service service, CancellationToken cancellationToken)
         {
             throw new NotImplementedException();
         }
@@ -31,7 +31,7 @@ namespace Infrastructure.Persistence.Repositories
             throw new NotImplementedException();
         }
 
-        public void Update(Service service, CancellationToken cancellationToken = default)
+        public void Update(Service service)
         {
             throw new NotImplementedException();
         }

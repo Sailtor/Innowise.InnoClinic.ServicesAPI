@@ -21,7 +21,7 @@ namespace UseCases.Handlers.Categories
         public async Task<CategoryForResponseDto> Handle(CreateCategoryCommand request, CancellationToken cancellationToken)
         {
             var category = _mapper.Map<Category>(request.categoryForCreation);
-            await _repositoryManager.CategoryRepository.AddAsync(category, cancellationToken);
+            category = await _repositoryManager.CategoryRepository.AddAsync(category, cancellationToken);
             return _mapper.Map<CategoryForResponseDto>(category);
         }
     }

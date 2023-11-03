@@ -14,13 +14,6 @@ namespace Infrastructure.Persistence.Migrations
         }
         public override void Up()
         {
-            Create.Table("Services")
-                .WithColumn("Id").AsGuid().NotNullable().PrimaryKey().WithDefault(SystemMethods.NewGuid)
-                .WithColumn("Name").AsString(1024).NotNullable()
-                .WithColumn("Price").AsDecimal(10,2).NotNullable()
-                .WithColumn("IsActive").AsBoolean().NotNullable()
-                .WithColumn("CategoryId").AsGuid().NotNullable().ForeignKey("Categories", "Id")
-                .WithColumn("SpecializationId").AsGuid().NotNullable().ForeignKey("Specializations", "Id");
             Create.Table("Categories")
                 .WithColumn("Id").AsGuid().NotNullable().PrimaryKey()
                 .WithColumn("Name").AsString(1024).NotNullable()
@@ -29,6 +22,13 @@ namespace Infrastructure.Persistence.Migrations
                 .WithColumn("Id").AsGuid().NotNullable().PrimaryKey()
                 .WithColumn("Name").AsString(1024).NotNullable()
                 .WithColumn("IsActive").AsBoolean().NotNullable();
+            Create.Table("Services")
+                .WithColumn("Id").AsGuid().NotNullable().PrimaryKey().WithDefault(SystemMethods.NewGuid)
+                .WithColumn("Name").AsString(1024).NotNullable()
+                .WithColumn("Price").AsDecimal(10, 2).NotNullable()
+                .WithColumn("IsActive").AsBoolean().NotNullable()
+                .WithColumn("CategoryId").AsGuid().NotNullable().ForeignKey("Categories", "Id")
+                .WithColumn("SpecializationId").AsGuid().NotNullable().ForeignKey("Specializations", "Id");
         }
     }
 }

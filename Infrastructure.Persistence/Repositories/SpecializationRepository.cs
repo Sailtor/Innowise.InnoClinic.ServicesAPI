@@ -11,7 +11,7 @@ namespace Infrastructure.Persistence.Repositories
             _context = context;
         }
 
-        public Task AddAsync(Specialization specialization, CancellationToken cancellationToken)
+        public Task<Specialization> AddAsync(Specialization specialization, CancellationToken cancellationToken)
         {
             throw new NotImplementedException();
         }
@@ -31,7 +31,7 @@ namespace Infrastructure.Persistence.Repositories
             throw new NotImplementedException();
         }
 
-        public void Update(Specialization specialization, CancellationToken cancellationToken = default)
+        public void Update(Specialization specialization)
         {
             throw new NotImplementedException();
         }

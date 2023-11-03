@@ -52,7 +52,7 @@ namespace Infrastructure.Presentation.Controllers
         }
 
         [Authorize(Roles = UserRoles.Receptionist)]
-        [HttpPut("{serviceId:guid}")]
+        [HttpPatch("{serviceId:guid}")]
         public async Task<IActionResult> ChangeServiceStatus(Guid serviceId, [FromBody] bool isActive, CancellationToken cancellationToken)
         {
             await _mediator.Send(new UpdateServiceStatusCommand(serviceId, isActive), cancellationToken);

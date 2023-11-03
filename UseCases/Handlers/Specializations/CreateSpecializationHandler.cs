@@ -21,7 +21,7 @@ namespace UseCases.Handlers
         public async Task<SpecializationForResponseDto> Handle(CreateSpecializationCommand request, CancellationToken cancellationToken)
         {
             var specialization = _mapper.Map<Specialization>(request.specializationForCreation);
-            await _repositoryManager.SpecializationRepository.AddAsync(specialization, cancellationToken);
+            specialization = await _repositoryManager.SpecializationRepository.AddAsync(specialization, cancellationToken);
             return _mapper.Map<SpecializationForResponseDto>(specialization);
         }
     }
