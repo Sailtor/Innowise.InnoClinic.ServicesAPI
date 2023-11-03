@@ -5,7 +5,7 @@ using UseCases.Dtos.ServiceDto;
 using UseCases.Interfaces;
 using UseCases.Queries.Services;
 
-namespace UseCases.Handlers
+namespace UseCases.Handlers.Services
 {
     public class GetServiceHandler : IQueryHandler<GetServiceQuery, ServiceForResponseDto>
     {

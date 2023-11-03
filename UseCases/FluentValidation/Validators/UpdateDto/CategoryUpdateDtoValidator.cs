@@ -1,7 +1,7 @@
 ﻿using FluentValidation;
 using UseCases.Dtos.CategoryDto;
 
-namespace UseCases.FluentValidation.Validators.CreateDto
+namespace UseCases.FluentValidation.Validators.UpdateDto
 {
     public class CategoryUpdateDtoValidator : AbstractValidator<CategoryForUpdateDto>
     {

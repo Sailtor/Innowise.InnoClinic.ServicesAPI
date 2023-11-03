@@ -1,6 +1,5 @@
 ﻿using FluentValidation;
 using UseCases.Commands.Categories;
-using UseCases.FluentValidation.Validators.CreateDto;
 
 namespace UseCases.FluentValidation.Validators.Commands.Categories
 {

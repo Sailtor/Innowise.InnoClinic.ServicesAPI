@@ -11,11 +11,6 @@ namespace Infrastructure.Persistence.Repositories
             _context = context;
         }
 
-        public Task<Service> AddAsync(Service service, CancellationToken cancellationToken)
-        {
-            throw new NotImplementedException();
-        }
-
         public Task<IEnumerable<Service>> GetAllAsync(CancellationToken cancellationToken = default)
         {
             throw new NotImplementedException();
@@ -26,12 +21,16 @@ namespace Infrastructure.Persistence.Repositories
             throw new NotImplementedException();
         }
 
-        public void Remove(Service service)
+        public Task<Service> AddAsync(Service service, CancellationToken cancellationToken)
+        {
+            throw new NotImplementedException();
+        }
+        public void Update(Service service)
         {
             throw new NotImplementedException();
         }
 
-        public void Update(Service service)
+        public void Remove(Service service)
         {
             throw new NotImplementedException();
         }

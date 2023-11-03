@@ -6,7 +6,7 @@ using UseCases.Commands.Specializations;
 using UseCases.Dtos.SpecializationDto;
 using UseCases.Queries.Specializations;
 
-namespace Presentation.Controllers
+namespace Infrastructure.Presentation.Controllers
 {
     [ApiController]
     [Route("api/specializations")]

@@ -4,7 +4,7 @@ using UseCases.Dtos.SpecializationDto;
 using UseCases.Interfaces;
 using UseCases.Queries.Specializations;
 
-namespace UseCases.Handlers
+namespace UseCases.Handlers.Specializations
 {
     public class GetSpecializationsHandler : IQueryHandler<GetSpecializationsQuery, IEnumerable<SpecializationForResponseDto>>
     {

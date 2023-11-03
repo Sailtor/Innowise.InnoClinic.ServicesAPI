@@ -4,7 +4,7 @@ using Core.Repositories;
 using UseCases.Commands.Specializations;
 using UseCases.Interfaces;
 
-namespace UseCases.Handlers
+namespace UseCases.Handlers.Specializations
 {
     public class UpdateSpecializationHandler : ICommandHandler<UpdateSpecializationCommand>
     {

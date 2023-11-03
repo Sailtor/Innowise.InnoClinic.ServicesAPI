@@ -5,7 +5,7 @@ using UseCases.Commands.Services;
 using UseCases.Dtos.ServiceDto;
 using UseCases.Interfaces;
 
-namespace UseCases.Handlers
+namespace UseCases.Handlers.Services
 {
     public class CreateServiceHandler : ICommandHandler<CreateServiceCommand, ServiceForResponseDto>
     {

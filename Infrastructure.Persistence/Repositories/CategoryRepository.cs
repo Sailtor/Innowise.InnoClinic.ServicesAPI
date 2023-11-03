@@ -1,5 +1,4 @@
 ﻿using Core.Entities;
-using Core.Exceptions;
 using Core.Repositories;
 using Dapper;
 using System.Data;

@@ -1,5 +1,4 @@
 ﻿using FluentMigrator;
-using FluentMigrator.SqlServer;
 
 namespace Infrastructure.Persistence.Migrations
 {

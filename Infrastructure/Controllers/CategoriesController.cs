@@ -1,12 +1,10 @@
-﻿using Infrastructure.Presentation.Data;
-using MediatR;
-using Microsoft.AspNetCore.Authorization;
+﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using UseCases.Commands.Categories;
 using UseCases.Dtos.CategoryDto;
 using UseCases.Queries.Categories;
 
-namespace Presentation.Controllers
+namespace Infrastructure.Presentation.Controllers
 {
     [ApiController]
     [Route("api/categories")]

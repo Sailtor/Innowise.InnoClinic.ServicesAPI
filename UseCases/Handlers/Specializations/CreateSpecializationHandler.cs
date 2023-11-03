@@ -5,7 +5,7 @@ using UseCases.Commands.Specializations;
 using UseCases.Dtos.SpecializationDto;
 using UseCases.Interfaces;
 
-namespace UseCases.Handlers
+namespace UseCases.Handlers.Specializations
 {
     public class CreateSpecializationHandler : ICommandHandler<CreateSpecializationCommand, SpecializationForResponseDto>
     {

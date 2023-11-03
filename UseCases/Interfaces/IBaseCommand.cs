@@ -1,6 +1,4 @@
-﻿using MediatR;
-
-namespace UseCases.Interfaces
+﻿namespace UseCases.Interfaces
 {
     public interface IBaseCommand
     {

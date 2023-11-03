@@ -1,7 +1,7 @@
 ﻿using FluentValidation;
 using UseCases.Dtos.SpecializationDto;
 
-namespace UseCases.FluentValidation.Validators.CreateDto
+namespace UseCases.FluentValidation.Validators.UpdateDto
 {
     public class SpecializationUpdateDtoValidator : AbstractValidator<SpecializationForUpdateDto>
     {

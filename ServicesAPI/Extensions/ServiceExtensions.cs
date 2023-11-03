@@ -4,7 +4,6 @@ using FluentValidation;
 using Infrastructure.Persistence;
 using Infrastructure.Persistence.Migrations;
 using MediatR;
-using System.Windows.Input;
 using UseCases.PipelineBehaviors;
 
 namespace InnoClinic.ServicesAPI.Extensions

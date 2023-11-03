@@ -3,7 +3,7 @@ using Core.Repositories;
 using UseCases.Commands.Services;
 using UseCases.Interfaces;
 
-namespace UseCases.Handlers
+namespace UseCases.Handlers.Services
 {
     public class DeleteServiceHandler : ICommandHandler<DeleteServiceCommand>
     {

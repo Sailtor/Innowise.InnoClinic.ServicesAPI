@@ -4,7 +4,7 @@ using Core.Repositories;
 using UseCases.Commands.Specializations;
 using UseCases.Interfaces;
 
-namespace UseCases.Handlers
+namespace UseCases.Handlers.Specializations
 {
     public class UpdateSpecializationStatusHandler : ICommandHandler<UpdateSpecializationStatusCommand>
     {
@@ -33,7 +33,7 @@ namespace UseCases.Handlers
                     if (s.SpecializationId == request.specializationId)
                     {
                         s.IsActive = request.isActive;
-                    } 
+                    }
                 }
             }
             /* TO DO:
