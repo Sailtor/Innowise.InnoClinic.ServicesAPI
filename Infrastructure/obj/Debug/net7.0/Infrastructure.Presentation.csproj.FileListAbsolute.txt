@@ -1,0 +1,17 @@
+D:\InnoClinic\InnoClinic.ServicesAPI\Infrastructure\bin\Debug\net7.0\Infrastructure.Presentation.deps.json
+D:\InnoClinic\InnoClinic.ServicesAPI\Infrastructure\bin\Debug\net7.0\Infrastructure.Presentation.dll
+D:\InnoClinic\InnoClinic.ServicesAPI\Infrastructure\bin\Debug\net7.0\Infrastructure.Presentation.pdb
+D:\InnoClinic\InnoClinic.ServicesAPI\Infrastructure\bin\Debug\net7.0\Core.dll
+D:\InnoClinic\InnoClinic.ServicesAPI\Infrastructure\bin\Debug\net7.0\UseCases.dll
+D:\InnoClinic\InnoClinic.ServicesAPI\Infrastructure\bin\Debug\net7.0\UseCases.pdb
+D:\InnoClinic\InnoClinic.ServicesAPI\Infrastructure\bin\Debug\net7.0\Core.pdb
+D:\InnoClinic\InnoClinic.ServicesAPI\Infrastructure\obj\Debug\net7.0\Infrastructure.Presentation.csproj.AssemblyReference.cache
+D:\InnoClinic\InnoClinic.ServicesAPI\Infrastructure\obj\Debug\net7.0\Infrastructure.Presentation.GeneratedMSBuildEditorConfig.editorconfig
+D:\InnoClinic\InnoClinic.ServicesAPI\Infrastructure\obj\Debug\net7.0\Infrastructure.Presentation.AssemblyInfoInputs.cache
+D:\InnoClinic\InnoClinic.ServicesAPI\Infrastructure\obj\Debug\net7.0\Infrastructure.Presentation.AssemblyInfo.cs
+D:\InnoClinic\InnoClinic.ServicesAPI\Infrastructure\obj\Debug\net7.0\Infrastructure.Presentation.csproj.CoreCompileInputs.cache
+D:\InnoClinic\InnoClinic.ServicesAPI\Infrastructure\obj\Debug\net7.0\Infrastructure.Presentation.csproj.CopyComplete
+D:\InnoClinic\InnoClinic.ServicesAPI\Infrastructure\obj\Debug\net7.0\Infrastructure.Presentation.dll
+D:\InnoClinic\InnoClinic.ServicesAPI\Infrastructure\obj\Debug\net7.0\refint\Infrastructure.Presentation.dll
+D:\InnoClinic\InnoClinic.ServicesAPI\Infrastructure\obj\Debug\net7.0\Infrastructure.Presentation.pdb
+D:\InnoClinic\InnoClinic.ServicesAPI\Infrastructure\obj\Debug\net7.0\ref\Infrastructure.Presentation.dll
