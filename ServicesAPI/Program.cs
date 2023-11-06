@@ -41,7 +41,7 @@ try
 
     app.UseAuthorization();
 
-    app.MapControllers().AllowAnonymous(); //temporary off cuz it pissed me off
+    app.MapControllers();
 
     app.Run();
 }

@@ -2,7 +2,6 @@
 using Newtonsoft.Json;
 using RabbitMQ.Client;
 using System.Text;
-using System.Threading.Channels;
 using UseCases.Interfaces;
 
 namespace Infrastructure.MessageBus
