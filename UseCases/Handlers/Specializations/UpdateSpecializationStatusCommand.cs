@@ -9,10 +9,11 @@ namespace UseCases.Handlers.Specializations
     public class UpdateSpecializationStatusHandler : ICommandHandler<UpdateSpecializationStatusCommand>
     {
         private readonly IRepositoryManager _repositoryManager;
-
-        public UpdateSpecializationStatusHandler(IRepositoryManager repositoryManager)
+        private readonly IMessageProducer _messageProducer;
+        public UpdateSpecializationStatusHandler(IRepositoryManager repositoryManager, IMessageProducer messageProducer)
         {
             _repositoryManager = repositoryManager;
+            _messageProducer = messageProducer;
         }
 
         public async Task Handle(UpdateSpecializationStatusCommand request, CancellationToken cancellationToken)
@@ -37,9 +38,8 @@ namespace UseCases.Handlers.Specializations
                     }
                 }
             }
-            /* TO DO:
-            change connected doctors status via rabbitMQ  
-            */
+
+            _messageProducer.SendMessage(specialization);
         }
     }
 }

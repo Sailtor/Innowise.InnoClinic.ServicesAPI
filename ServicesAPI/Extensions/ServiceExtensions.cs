@@ -1,9 +1,12 @@
 ﻿using Core.Repositories;
 using FluentMigrator.Runner;
 using FluentValidation;
+using Infrastructure.MessageBus;
 using Infrastructure.Persistence;
 using Infrastructure.Persistence.Migrations;
+using InnoClinic.ServicesAPI.Middleware;
 using MediatR;
+using UseCases.Interfaces;
 using UseCases.PipelineBehaviors;
 
 namespace InnoClinic.ServicesAPI.Extensions
@@ -50,6 +53,7 @@ namespace InnoClinic.ServicesAPI.Extensions
         {
             services.AddAutoMapper(typeof(UseCases.AssemblyReference).Assembly);
         }
+
         public static void CofigureAuthorization(this IServiceCollection services)
         {
             services.AddAuthentication("Bearer")
@@ -61,11 +65,21 @@ namespace InnoClinic.ServicesAPI.Extensions
                });
         }
 
-        /* --- CUSTOM MIDDLEWARE --- */
-        /*public static void UseExceptionHandlerMiddleware(this IApplicationBuilder app)
+        public static void CofigureExceptionHandlerMiddleware(this IServiceCollection services)
         {
-            app.UseMiddleware<ExceptionHandlerMiddleware>();
-        }*/
+            services.AddTransient<ExceptionHandlingMiddleware>();
+        }
+
+        public static void CofigureRabbitMQ(this IServiceCollection services)
+        {
+            services.AddTransient<IMessageProducer, RabbitMQServicesProducer>();
+        }
+
+        /* --- CUSTOM MIDDLEWARE --- */
+        public static void UseExceptionHandlerMiddleware(this IApplicationBuilder app)
+        {
+            app.UseMiddleware<ExceptionHandlingMiddleware>();
+        }
 
     }
 }
