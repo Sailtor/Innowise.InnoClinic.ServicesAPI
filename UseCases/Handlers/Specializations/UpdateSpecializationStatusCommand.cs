@@ -33,6 +33,7 @@ namespace UseCases.Handlers.Specializations
                     if (s.SpecializationId == request.specializationId)
                     {
                         s.IsActive = request.isActive;
+                        _repositoryManager.ServiceRepository.Update(s);
                     }
                 }
             }
