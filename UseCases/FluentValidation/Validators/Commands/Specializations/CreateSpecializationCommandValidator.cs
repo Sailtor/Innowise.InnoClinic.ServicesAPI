@@ -8,7 +8,9 @@ namespace UseCases.FluentValidation.Validators.Commands.Specializations
     {
         public CreateSpecializationCommandValidator()
         {
-            RuleFor(p => p.specializationForCreation).NotNull().SetValidator(new SpecializationCreationDtoValidator()).WithErrorCode("Invalid specialization");
+            RuleFor(p => p.specializationForCreation).NotNull().WithMessage("Specialization can't be null")
+                .SetValidator(new SpecializationCreationDtoValidator())
+                .WithErrorCode("Invalid specialization");
         }
     }
 }

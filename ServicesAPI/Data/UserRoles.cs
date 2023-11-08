@@ -1,4 +1,4 @@
-﻿namespace Infrastructure.Presentation.Data
+﻿namespace InnoClinic.ServicesAPI.Data
 {
     public static class UserRoles
     {

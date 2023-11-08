@@ -21,7 +21,6 @@
     <ProjectReference Include="..\Entities\Core.csproj" />
     <ProjectReference Include="..\Infrastructure.MessageBus\Infrastructure.MessageBus.csproj" />
     <ProjectReference Include="..\Infrastructure.Persistence\Infrastructure.Persistence.csproj" />
-    <ProjectReference Include="..\Infrastructure\Infrastructure.Presentation.csproj" />
     <ProjectReference Include="..\UseCases\UseCases.csproj" />
   </ItemGroup>
 

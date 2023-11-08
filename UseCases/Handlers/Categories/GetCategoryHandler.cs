@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using Core.Exceptions;
-using Core.Repositories;
+using Core.Repository_interfaces;
 using UseCases.Dtos.CategoryDto;
 using UseCases.Interfaces;
 using UseCases.Queries.Categories;

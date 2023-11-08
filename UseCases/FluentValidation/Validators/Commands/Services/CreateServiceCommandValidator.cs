@@ -8,7 +8,9 @@ namespace UseCases.FluentValidation.Validators.Commands.Services
     {
         public CreateServiceCommandValidator()
         {
-            RuleFor(p => p.serviceForCreation).NotNull().SetValidator(new ServiceCreationDtoValidator()).WithErrorCode("Invalid service");
+            RuleFor(p => p.serviceForCreation).NotNull().WithMessage("Service can't be null")
+                .SetValidator(new ServiceCreationDtoValidator())
+                .WithErrorCode("Invalid service");
         }
     }
 }

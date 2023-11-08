@@ -19,7 +19,10 @@ namespace Infrastructure.MessageBus
 
         public void SendMessage<T>(T message)
         {
-            var factory = new ConnectionFactory { HostName = _hostname };
+            var factory = new ConnectionFactory
+            {
+                HostName = _hostname
+            };
             var connection = factory.CreateConnection();
             using var channel = connection.CreateModel();
             channel.QueueDeclare(queue: _queueName, durable: false, exclusive: false, autoDelete: false, arguments: null);

@@ -7,8 +7,12 @@ namespace UseCases.FluentValidation.Validators.Commands.Specializations
     {
         public UpdateSpecializationStatusCommandValidator()
         {
-            RuleFor(p => p.specializationId).NotNull().Must(ValidationMethods.ValidateGuid).WithErrorCode("Invalid specialization ID");
-            RuleFor(p => p.isActive).NotNull().WithErrorCode("Invalid specialization status");
+            RuleFor(p => p.specializationId).NotNull().WithMessage("Specialization id can't be null")
+                .Must(ValidationMethods.ValidateGuid).WithMessage("Specialization id must be a valid guid")
+                .WithErrorCode("Invalid specialization ID");
+
+            RuleFor(p => p.isActive).NotNull().WithMessage("Specialization status can't be null")
+                .WithErrorCode("Invalid specialization status");
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using Core.Entities;
 using Core.Exceptions;
-using Core.Repositories;
+using Core.Repository_interfaces;
 using UseCases.Commands.Services;
 using UseCases.Dtos.ServiceDto;
 using UseCases.Interfaces;

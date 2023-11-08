@@ -7,7 +7,9 @@ namespace UseCases.FluentValidation.Validators.Commands.Categories
     {
         public DeleteCategoryCommandValidator()
         {
-            RuleFor(p => p.categoryId).NotNull().Must(ValidationMethods.ValidateGuid).WithErrorCode("Invalid category ID");
+            RuleFor(p => p.categoryId).NotNull().WithMessage("Category can't be null")
+                .Must(ValidationMethods.ValidateGuid)
+                .WithErrorCode("Invalid category ID");
         }
     }
 }

@@ -9,11 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core", "..\Entities\Core.cs
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UseCases", "..\UseCases\UseCases.csproj", "{FD8707AC-CA10-455A-AA5A-1C67884542FB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure.Presentation", "..\Infrastructure\Infrastructure.Presentation.csproj", "{39832427-0A53-4DF9-A160-3A19FF325D7B}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure.Persistence", "..\Infrastructure.Persistence\Infrastructure.Persistence.csproj", "{BE895CFF-E096-47DC-882F-C6CE35604AA4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.MessageBus", "..\Infrastructure.MessageBus\Infrastructure.MessageBus.csproj", "{88FAC3D6-3016-4E3C-86C5-356445ACF005}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure.MessageBus", "..\Infrastructure.MessageBus\Infrastructure.MessageBus.csproj", "{88FAC3D6-3016-4E3C-86C5-356445ACF005}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,10 +31,6 @@ Global
 		{FD8707AC-CA10-455A-AA5A-1C67884542FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD8707AC-CA10-455A-AA5A-1C67884542FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FD8707AC-CA10-455A-AA5A-1C67884542FB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{39832427-0A53-4DF9-A160-3A19FF325D7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{39832427-0A53-4DF9-A160-3A19FF325D7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{39832427-0A53-4DF9-A160-3A19FF325D7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{39832427-0A53-4DF9-A160-3A19FF325D7B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{BE895CFF-E096-47DC-882F-C6CE35604AA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BE895CFF-E096-47DC-882F-C6CE35604AA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BE895CFF-E096-47DC-882F-C6CE35604AA4}.Release|Any CPU.ActiveCfg = Release|Any CPU

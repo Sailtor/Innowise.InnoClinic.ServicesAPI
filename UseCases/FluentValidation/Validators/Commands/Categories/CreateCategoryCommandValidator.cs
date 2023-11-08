@@ -8,7 +8,9 @@ namespace UseCases.FluentValidation.Validators.Commands.Categories
     {
         public CreateCategoryCommandValidator()
         {
-            RuleFor(p => p.categoryForCreation).NotNull().SetValidator(new CategoryCreationDtoValidator()).WithErrorCode("Invalid category");
+            RuleFor(p => p.categoryForCreation).NotNull().WithMessage("Category can't be null")
+                .SetValidator(new CategoryCreationDtoValidator())
+                .WithErrorCode("Invalid category");
         }
     }
 }

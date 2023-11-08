@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using Core.Exceptions;
-using Core.Repositories;
+using Core.Repository_interfaces;
 using UseCases.Dtos.SpecializationDto;
 using UseCases.Interfaces;
 using UseCases.Queries.Specializations;

@@ -7,8 +7,14 @@ namespace UseCases.FluentValidation.Validators.CreateDto
     {
         public SpecializationCreationDtoValidator()
         {
-            RuleFor(p => p.Name).NotNull().NotEmpty().Length(2, 1024).WithErrorCode("Invalid specialization name");
-            RuleFor(s => s.IsActive).NotNull().WithErrorCode("Invalid specialization status");
+            RuleFor(p => p.Name).NotNull()
+                .WithMessage("Name can't be null")
+                .Length(2, 1024)
+                .WithMessage("Invalid name length")
+                .WithErrorCode("Invalid specialization name");
+
+            RuleFor(s => s.IsActive).NotNull().WithMessage("Specialization status can't be null")
+                .WithErrorCode("Invalid specialization status");
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using Core.Entities;
-using Core.Repositories;
+using Core.Repository_interfaces;
 using UseCases.Commands.Categories;
 using UseCases.Dtos.CategoryDto;
 using UseCases.Interfaces;

@@ -7,7 +7,9 @@ namespace UseCases.FluentValidation.Validators.Commands.Services
     {
         public DeleteServiceCommandValidator()
         {
-            RuleFor(p => p.serviceId).NotNull().Must(ValidationMethods.ValidateGuid).WithErrorCode("Invalid service ID");
+            RuleFor(p => p.serviceId).NotNull().WithMessage("Service id can't be null")
+                .Must(ValidationMethods.ValidateGuid).WithMessage("Service id must be a valid guid")
+                .WithErrorCode("Invalid service ID");
         }
     }
 }

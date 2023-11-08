@@ -7,8 +7,12 @@ namespace UseCases.FluentValidation.Validators.Commands.Services
     {
         public UpdateServiceStatusCommandValidator()
         {
-            RuleFor(p => p.serviceId).NotNull().Must(ValidationMethods.ValidateGuid).WithErrorCode("Invalid service ID");
-            RuleFor(p => p.isActive).NotNull().WithErrorCode("Invalid service status");
+            RuleFor(p => p.serviceId).NotNull().WithMessage("Service id can't be null")
+                .Must(ValidationMethods.ValidateGuid).WithMessage("Service id must be a valid guid")
+                .WithErrorCode("Invalid service ID");
+
+            RuleFor(p => p.isActive).NotNull().WithMessage("Service status can't be null")
+                .WithErrorCode("Invalid service status");
         }
     }
 }

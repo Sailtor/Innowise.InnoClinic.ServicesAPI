@@ -1,4 +1,4 @@
-﻿using Core.Repositories;
+﻿using Core.Repository_interfaces;
 using FluentMigrator.Runner;
 using FluentValidation;
 using Infrastructure.MessageBus;
@@ -15,8 +15,7 @@ namespace InnoClinic.ServicesAPI.Extensions
     {
         public static void ConfigureControllers(this IServiceCollection services)
         {
-            services.AddControllers()
-                .AddApplicationPart(typeof(Infrastructure.Presentation.AssemblyReference).Assembly);
+            services.AddControllers();
         }
 
         public static void ConfigureSwagger(this IServiceCollection services)
@@ -54,13 +53,13 @@ namespace InnoClinic.ServicesAPI.Extensions
             services.AddAutoMapper(typeof(UseCases.AssemblyReference).Assembly);
         }
 
-        public static void CofigureAuthorization(this IServiceCollection services)
+        public static void CofigureAuthorization(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddAuthentication("Bearer")
                .AddJwtBearer("Bearer", opt =>
                {
                    opt.RequireHttpsMetadata = false;
-                   opt.Authority = "https://localhost:5005";
+                   opt.Authority = configuration.GetSection("IdentityServerAuthority").Value;
                    opt.Audience = "services";
                });
         }
