@@ -1,6 +1,6 @@
 ﻿using Core.Entities;
 
-namespace Core.Repository_interfaces
+namespace Core.RepositoryInterfaces
 {
     public interface ICategoryRepository
     {

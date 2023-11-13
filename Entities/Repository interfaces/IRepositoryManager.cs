@@ -1,4 +1,4 @@
-﻿namespace Core.Repository_interfaces
+﻿namespace Core.RepositoryInterfaces
 {
     public interface IRepositoryManager
     {

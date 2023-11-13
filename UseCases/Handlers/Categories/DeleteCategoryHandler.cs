@@ -1,5 +1,5 @@
 ﻿using Core.Exceptions;
-using Core.Repository_interfaces;
+using Core.RepositoryInterfaces;
 using UseCases.Commands.Categories;
 using UseCases.Interfaces;
 

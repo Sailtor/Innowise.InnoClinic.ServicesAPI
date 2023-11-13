@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using Core.Repository_interfaces;
+using Core.RepositoryInterfaces;
 using UseCases.Dtos.ServiceDto;
 using UseCases.Interfaces;
 using UseCases.Queries.Services;

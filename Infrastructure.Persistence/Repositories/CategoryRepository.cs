@@ -1,5 +1,5 @@
 ﻿using Core.Entities;
-using Core.Repository_interfaces;
+using Core.RepositoryInterfaces;
 using Dapper;
 using System.Data;
 

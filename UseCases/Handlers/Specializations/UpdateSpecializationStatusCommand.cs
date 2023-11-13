@@ -1,6 +1,6 @@
 ﻿using Core.Entities;
 using Core.Exceptions;
-using Core.Repository_interfaces;
+using Core.RepositoryInterfaces;
 using UseCases.Commands.Specializations;
 using UseCases.Interfaces;
 

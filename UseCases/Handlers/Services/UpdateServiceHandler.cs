@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using Core.Exceptions;
-using Core.Repository_interfaces;
+using Core.RepositoryInterfaces;
 using UseCases.Commands.Services;
 using UseCases.Interfaces;
 

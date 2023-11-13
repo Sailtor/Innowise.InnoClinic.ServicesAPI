@@ -1,4 +1,4 @@
-﻿using Core.Repository_interfaces;
+﻿using Core.RepositoryInterfaces;
 using FluentMigrator.Runner;
 using FluentValidation;
 using Infrastructure.MessageBus;
