@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
 using Core.Exceptions;
 using Core.RepositoryInterfaces;
+using Infrastructure.Shared;
+using MassTransit;
 using UseCases.Commands.Services;
 using UseCases.Interfaces;
 
@@ -10,11 +12,13 @@ namespace UseCases.Handlers.Services
     {
         private readonly IRepositoryManager _repositoryManager;
         private readonly IMapper _mapper;
+        private readonly IPublishEndpoint _publishEndpoint;
 
-        public UpdateServiceHandler(IRepositoryManager repositoryManager, IMapper mapper)
+        public UpdateServiceHandler(IRepositoryManager repositoryManager, IMapper mapper, IPublishEndpoint publishEndpoint)
         {
             _repositoryManager = repositoryManager;
             _mapper = mapper;
+            _publishEndpoint = publishEndpoint;
         }
 
         public async Task Handle(UpdateServiceCommand request, CancellationToken cancellationToken)
@@ -34,6 +38,12 @@ namespace UseCases.Handlers.Services
             }
             _mapper.Map(request.serviceForUpdate, service);
             _repositoryManager.ServiceRepository.Update(service);
+
+            await _publishEndpoint.Publish<ServiceNameChanged>(new
+            {
+                Id = request.serviceId,
+                Name = request.serviceForUpdate.Name
+            });
         }
     }
 }

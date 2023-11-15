@@ -5,6 +5,7 @@ using Infrastructure.MessageBus;
 using Infrastructure.Persistence;
 using Infrastructure.Persistence.Migrations;
 using InnoClinic.ServicesAPI.Middleware;
+using MassTransit;
 using MediatR;
 using UseCases.Interfaces;
 using UseCases.PipelineBehaviors;
@@ -72,6 +73,14 @@ namespace InnoClinic.ServicesAPI.Extensions
         public static void CofigureRabbitMQ(this IServiceCollection services)
         {
             services.AddTransient<IMessageProducer, RabbitMQServicesProducer>();
+        }
+
+        public static void CofigureMassTransit(this IServiceCollection services)
+        {
+            services.AddMassTransit(x =>
+            {
+                x.UsingRabbitMq();
+            });
         }
 
         /* --- CUSTOM MIDDLEWARE --- */
