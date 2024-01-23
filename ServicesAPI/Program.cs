@@ -22,6 +22,8 @@ try
     builder.Services.CofigureAuthorization(builder.Configuration);
     builder.Services.CofigureExceptionHandlerMiddleware();
     builder.Services.CofigureRabbitMQ();
+    builder.Services.CofigureMassTransit();
+    builder.Services.ConfigureCORS(builder.Configuration);
 
     var app = builder.Build();
 
